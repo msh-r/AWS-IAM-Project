@@ -23,7 +23,8 @@ command -v dos2unix >/dev/null || {echo "dos2unix tool not found.Pleae install d
 dos2unix $1
 
 # Read the input CSV file line by line
-while IFS=',;' read -r username group password || [ -n "$user"]; do
+while IFS=',;' read -r username group password || [ -n "$user"]
+ do
     if [$user != "user" ]; then
         # Check if username, group, and password are not empty
         if [ -z "$user" ] || [ -z "$group" ] || [ -z "$password" ]; then
